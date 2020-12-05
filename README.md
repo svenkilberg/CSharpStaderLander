@@ -1,6 +1,6 @@
 # CSharpStaderLander
-Skapa objekt från JSON med Json.NET
-Om man vill använda JSON-filer i .NET kan man använda paketet Newtonsoft.Json Json.NET.
+Skapa objekt från JSON med Json.NET.  
+Om man vill använda JSON-filer i .NET kan man använda paketet Newtonsoft.Json Json.NET.  
 Här är ett litet exempel på hur det går till att läsa in data (Deserialization).
 
 ## Lägg till nugetpaketet Newtonsoft.Json
@@ -44,6 +44,7 @@ För att stämma med land.json:
 ```
 Nu kan man skapa en lista med alla objekt som finns i JSON filen:
 ```
+string countryJson = System.IO.File.ReadAllText(@"land.json");
 List<Country> countryList = JsonConvert.DeserializeObject<List<Country>>(countryJson);
 ```
 ## Vidare läsning
